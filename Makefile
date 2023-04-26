@@ -4,5 +4,11 @@ install:
 help:
 	node bin/gendiff.js -h
 
-genDiffTest:
-	node bin/gendiff.js file1.json file2.json
+run:
+	node bin/gendiff.js __fixtures__/file1.json __fixtures__/file2.json
+
+lint:
+	npx eslint .
+
+test:
+	npm test
