@@ -3,3 +3,4 @@
 [![Node CI](https://github.com/raf-coffee/frontend-project-46/workflows/Node%20CI/badge.svg)](https://github.com/raf-coffee/frontend-project-46/actions)
 
 <a href="https://codeclimate.com/github/raf-coffee/frontend-project-46/maintainability"><img src="https://api.codeclimate.com/v1/badges/ccb21937fa1db1450a96/maintainability" /></a>
+<a href="https://codeclimate.com/github/raf-coffee/frontend-project-46/test_coverage"><img src="https://api.codeclimate.com/v1/badges/ccb21937fa1db1450a96/test_coverage" /></a>
