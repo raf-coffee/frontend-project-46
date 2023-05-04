@@ -23,7 +23,7 @@ const formatter = (tree) => {
       });
       return stringify(lines, depth);
     }
-    const lines = Object.entries(node).map(([key, value]) => `${currentIndent(depth + 0.5)}${key}: ${iter(value, depth + 1)}`);
+    const lines = Object.entries(node).map(([key, value]) => `${currentIndent(depth + 0.5, 'changed')}${key}: ${iter(value, depth + 1)}`);
     return stringify(lines, depth);
   };
   return iter(tree, 1);

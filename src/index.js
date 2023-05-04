@@ -1,6 +1,6 @@
 import parse from './parse.js';
 import buildAST from './buildAST.js';
-import dispatcher from './formatter/dispatcher.js';
+import dispatcher from './formatter/index.js';
 
 const showDiff = (file1, file2, format) => {
   const dataFromFile1 = parse(file1);
