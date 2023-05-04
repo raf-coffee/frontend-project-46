@@ -12,26 +12,25 @@ const toString = (value) => {
   }
 };
 
-const plain = (tree) => {
-  const iter = (node, path) => node.map((child) => {
-    const newPath = [path, child.key].flat().join('.');
-    if (child.status === 'added') {
-      return `Property '${newPath}' was added with value: ${toString(child.value)}`;
+const iter = (node, path) => node.map((child) => {
+  const newPath = [path, child.key].flat().join('.');
+  if (child.status === 'added') {
+    return `Property '${newPath}' was added with value: ${toString(child.value)}`;
+  }
+  if (child.status === 'deleted') {
+    return `Property '${newPath}' was removed`;
+  }
+  if (child.status === 'changed') {
+    return `Property '${newPath}' was updated. From ${toString(child.value1)} to ${toString(child.value2)}`;
+  }
+  if (child.status === 'unchanged') {
+    if (Array.isArray(child.value)) {
+      return iter(child.value, newPath);
     }
-    if (child.status === 'deleted') {
-      return `Property '${newPath}' was removed`;
-    }
-    if (child.status === 'changed') {
-      return `Property '${newPath}' was updated. From ${toString(child.value1)} to ${toString(child.value2)}`;
-    }
-    if (child.status === 'unchanged') {
-      if (Array.isArray(child.value)) {
-        return iter(child.value, newPath);
-      }
-    }
-    return '';
-  }).filter((el) => el).join('\n');
-  return iter(tree, []);
-};
+  }
+  return '';
+}).filter((el) => el).join('\n');
+
+const plain = (tree) => iter(tree, []);
 
 export default plain;
