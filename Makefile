@@ -10,6 +10,9 @@ run:
 plain:
 	node bin/gendiff.js --format plain __fixtures__/file1.json __fixtures__/file2.json
 
+json:
+	node bin/gendiff.js --format json __fixtures__/file1.json __fixtures__/file2.json
+
 lint:
 	npx eslint .
 
