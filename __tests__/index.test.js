@@ -8,6 +8,7 @@ test('compare stylish with json', () => {
 });
 
 test('compare stylish with yaml/yml', () => {
+  expect(showDiff('file1.yaml', 'file2.yaml', 'stylish')).toEqual(resultStylish);
   expect(showDiff('file1.yml', 'file2.yml', 'stylish')).toEqual(resultStylish);
 });
 
@@ -16,6 +17,7 @@ test('compare plain with json', () => {
 });
 
 test('compare plain with yaml/yml', () => {
+  expect(showDiff('file1.yaml', 'file2.yaml', 'plain')).toEqual(resultPlain);
   expect(showDiff('file1.yml', 'file2.yml', 'plain')).toEqual(resultPlain);
 });
 
@@ -24,5 +26,6 @@ test('compare json with json', () => {
 });
 
 test('compare json with yaml/yml', () => {
+  expect(showDiff('file1.yaml', 'file2.yaml', 'json')).toEqual(resultJSON);
   expect(showDiff('file1.yml', 'file2.yml', 'json')).toEqual(resultJSON);
 });
