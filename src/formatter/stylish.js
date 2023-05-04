@@ -1,15 +1,14 @@
-const REPLACER = ' ';
-const SPACES = 4;
+import stringify from "../../utils/stringify.js";
+
+const currentIndent = (treeDepth, status = 'not unchanged', replacer = " ", spaces = 4) => (
+  replacer.repeat(status !== 'unchanged' ? spaces * treeDepth - 2 : spaces * treeDepth));
+
 
 const formatter = (tree) => {
   const iter = (node, depth) => {
     if (typeof node !== 'object' || node === null) {
       return `${node}`;
     }
-
-    const currentIndent = (treeDepth, status = 'not unchanged') => REPLACER.repeat(status !== 'unchanged' ? SPACES * treeDepth - 2 : SPACES * treeDepth);
-    const braceIndent = (treeDepth) => REPLACER.repeat(SPACES * treeDepth - SPACES);
-
     if (Array.isArray((node))) {
       const lines = Object.values(node).map((value) => {
         if (value.status === 'unchanged') {
@@ -23,10 +22,10 @@ const formatter = (tree) => {
         }
         return `${currentIndent(depth)}- ${value.key}: ${iter(value.value1, depth + 1)}\n${currentIndent(depth)}+ ${value.key}: ${iter(value.value2, depth + 1)}`;
       });
-      return ['{', ...lines, `${braceIndent(depth)}}`].join('\n');
+      return stringify(lines, depth);
     }
     const lines = Object.entries(node).map(([key, value]) => `${currentIndent(depth + 0.5)}${key}: ${iter(value, depth + 1)}`);
-    return ['{', ...lines, `${braceIndent(depth)}}`].join('\n');
+    return stringify(lines, depth);
   };
   return iter(tree, 1);
 };
