@@ -1,5 +1,5 @@
 import resultStylish from '../__fixtures__/resultStylish.js';
-import resultPlain from "../__fixtures__/resultPlain.js";
+import resultPlain from '../__fixtures__/resultPlain.js';
 import showDiff from '../src/index.js';
 
 test('compare stylish json', () => {

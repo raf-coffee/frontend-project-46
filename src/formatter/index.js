@@ -1,5 +1,5 @@
 import stylish from './stylish.js';
-import plain from "./plain.js";
+import plain from './plain.js';
 
 export default (format) => {
   switch (format) {
@@ -7,7 +7,7 @@ export default (format) => {
       return (data) => stylish(data);
     }
     case 'plain': {
-      return (data) => plain(data)
+      return (data) => plain(data);
     }
     default: {
       throw new Error('Format is unknown');
