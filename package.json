@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/raf-coffee/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/raf-coffee/frontend-project-46/actions)",
+  "description": "This is a CLI for comparing data from two objects that are read from JSON, YML, or YAML files",
   "main": "./src/index.js",
   "type": "module",
   "bin": {
