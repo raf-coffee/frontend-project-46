@@ -13,6 +13,9 @@ plain:
 json:
 	node bin/gendiff.js --format json __fixtures__/file1.json __fixtures__/file2.json
 
+error:
+	node bin/gendiff.js --format js __fixtures__/file1.json __fixtures__/file2.json
+
 lint:
 	npx eslint .
 
