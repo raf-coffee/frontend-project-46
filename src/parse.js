@@ -1,7 +1,7 @@
 import path from 'path';
 import jsYaml from 'js-yaml';
 import { readFileSync } from 'node:fs';
-import resolvePath from '../utils/resolvePath.js';
+import resolvePath from './utils/resolvePath.js';
 
 const parse = (filename) => {
   const extension = path.extname(filename);

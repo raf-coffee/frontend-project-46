@@ -1,4 +1,4 @@
-import stringify from '../../utils/stringify.js';
+import stringify from '../utils/stringify.js';
 
 const indent = (treeDepth, status, replacer = ' ', spaces = 4) => (
   replacer.repeat(status !== 'unchanged' ? spaces * treeDepth - 2 : spaces * treeDepth));

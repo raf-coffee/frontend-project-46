@@ -1,5 +1,5 @@
 import { isDeepStrictEqual } from 'node:util';
-import getSortedKeys from '../utils/getSortedKeys.js';
+import getSortedKeys from './utils/getSortedKeys.js';
 
 const buildAST = (obj1, obj2) => {
   const keys = getSortedKeys(obj1, obj2);
