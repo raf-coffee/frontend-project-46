@@ -1,4 +1,5 @@
 ### Hexlet tests and linter status:
+
 [![Actions Status](https://github.com/raf-coffee/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/raf-coffee/frontend-project-46/actions)
 [![Node CI](https://github.com/raf-coffee/frontend-project-46/workflows/Node%20CI/badge.svg)](https://github.com/raf-coffee/frontend-project-46/actions)
 
@@ -7,10 +8,10 @@
 
 # Вычислитель различий
 
-Проект представляет собой консольную утилиту для сравнения данных из двух объектов, которые считываются из файлов форматов JSON, YML и YAML.
-Утилита может выводить различия в трех форматах: stylish, plain и json. 
+The project is a command-line utility for comparing data from two objects that are read from JSON, YML, and YAML file
+formats. The utility can output differences in three formats: stylish, plain, and json.
 
-# Использование
+# Using
 
 ```bash
 gendiff [options] <filepath1> <filepath2>
@@ -24,7 +25,8 @@ options:
   -h, --help           display help for command
 ```
 
-# Пример работы
+# Examples
+
 ```bash
 gendiff -f stylish file1.json file2.json
 {
