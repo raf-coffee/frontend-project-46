@@ -14,7 +14,7 @@ export default (format) => {
       return (data) => json(data);
     }
     default: {
-      throw new Error('Format is unknown');
+      throw new Error(`Invalid format - ${format}`);
     }
   }
 };
