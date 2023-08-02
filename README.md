@@ -6,7 +6,7 @@
 <a href="https://codeclimate.com/github/raf-coffee/frontend-project-46/maintainability"><img src="https://api.codeclimate.com/v1/badges/ccb21937fa1db1450a96/maintainability" /></a>
 <a href="https://codeclimate.com/github/raf-coffee/frontend-project-46/test_coverage"><img src="https://api.codeclimate.com/v1/badges/ccb21937fa1db1450a96/test_coverage" /></a>
 
-# Вычислитель различий
+# Difference calculator project
 
 The project is a command-line utility for comparing data from two objects that are read from JSON, YML, and YAML file
 formats. The utility can output differences in three formats: stylish, plain, and json.
